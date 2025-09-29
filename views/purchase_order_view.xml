@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<data>
+
+	<record id="purchase_order_view_form" model="ir.ui.view">
+		<field name="name">purchase.order.view.form.inherit</field>
+		<field name="model">purchase.order</field>
+		<field name="inherit_id" ref="purchase.purchase_order_form"/>
+		<field name="arch" type="xml">
+
+		<xpath expr="//div[@class='oe_button_box']" position="inside">
+			<button class="oe_stat_button" name="action_open_pending_auth_lines" type="object" icon="fa-bars">
+			<div class="o_stat_info">
+				<span class="o_stat_text">
+					Por autorizar
+				</span>
+			</div>
+			</button>
+		</xpath>
+
+		<field name="partner_id" position="after">
+			<field name="sale_order_id" />
+		</field>
+
+		<xpath expr="//field[@name='order_line']/list/field[@name='taxes_id']" position="after">
+			<field name="auth_state" readonly="1"/>
+			<button string="Autorizar" name="btn_auth" type="object" class="btn-success" invisible="auth_state != 'pendiente'" groups="brightsolutions_control_presupuesto.group_purchase_lines_auth"/>
+		</xpath>
+
+		</field>
+	</record>
+
+	</data>
+
+</odoo>

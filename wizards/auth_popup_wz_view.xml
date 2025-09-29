@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+
+        <record id="auth_popup_wz_view_form" model="ir.ui.view">
+            <field name="name">auth.popup.wz.view.form</field>
+            <field name="model">auth.popup.wz</field>
+            <field name="arch" type="xml">
+                <form string="Autorizar lineas">
+                    <sheet>
+
+                        <field name="msg" />
+
+                        <field name="id" invisible="1" />
+                        <field name="purchase_line_ids" nolabel="1" readonly="1">
+                            <list editable="bottom" create="0">
+                                <field name="product_id" readonly="1" />
+                                <field name="name" readonly="1" />
+                                <field name="price_subtotal" />
+                                <field name="auth_state" widget="badge" />
+                                <field name="request_auth" widget="boolean_toggle" invisible="auth_state != 'False'" />
+                            </list>
+                        </field>
+                        <field name="details"/>
+                    </sheet>
+                    <footer>
+                        <button string="Ok" name="btn_ok" type="object" class="oe_highlight"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+
+
+</odoo>

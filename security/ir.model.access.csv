@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_auth_popup_wz,Auth Popup Access,brightsolutions_control_presupuesto.model_auth_popup_wz,base.group_user,1,1,1,1
