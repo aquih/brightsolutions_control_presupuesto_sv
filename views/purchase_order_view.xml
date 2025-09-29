@@ -25,7 +25,7 @@
 
 		<xpath expr="//field[@name='order_line']/list/field[@name='taxes_id']" position="after">
 			<field name="auth_state" readonly="1"/>
-			<button string="Autorizar" name="btn_auth" type="object" class="btn-success" invisible="auth_state != 'pendiente'" groups="brightsolutions_control_presupuesto.group_purchase_lines_auth"/>
+			<button string="Autorizar" name="btn_auth" type="object" class="btn-success" invisible="auth_state != 'pendiente'" groups="brightsolutions_control_presupuesto_sv.group_purchase_lines_auth"/>
 		</xpath>
 
 		</field>

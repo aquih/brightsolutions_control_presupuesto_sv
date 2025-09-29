@@ -218,7 +218,7 @@ class PurchaseOrderLine(models.Model):
         return super().write(vals)
     
     def unlink(self):
-        if self.auth_state == 'autorizado' and not self.env.user.has_group('brightsolutions_control_presupuesto.group_purchase_lines_auth'):
+        if self.auth_state == 'autorizado' and not self.env.user.has_group('brightsolutions_control_presupuesto_sv.group_purchase_lines_auth'):
             raise ValidationError('No puede eliminar lineas autorizadas. Requiere permisos de usuario autorizador')
 
         return super().unlink()

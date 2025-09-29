@@ -16,7 +16,7 @@
 					<field name="taxes_id" widget="many2many_tags" />
 					<field name="price_subtotal" />
 					<field name="auth_state" widget="badge" />
-					<button string="Autorizar" name="btn_auth" type="object" class="btn-success" invisible="auth_state != 'pendiente'"  groups="brightsolutions_control_presupuesto.group_purchase_lines_auth"/>
+					<button string="Autorizar" name="btn_auth" type="object" class="btn-success" invisible="auth_state != 'pendiente'"  groups="brightsolutions_control_presupuesto_sv.group_purchase_lines_auth"/>
 				</list>
 			</field>
 		</record>
