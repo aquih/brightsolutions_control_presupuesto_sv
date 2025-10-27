@@ -19,7 +19,7 @@
                                 <field name="name" readonly="1" />
                                 <field name="price_subtotal" />
                                 <field name="auth_state" widget="badge" />
-                                <field name="request_auth" widget="boolean_toggle" invisible="auth_state != 'False'" />
+                                <field name="request_auth" widget="boolean_toggle" invisible="auth_state != False" />
                             </list>
                         </field>
                         <field name="details"/>
