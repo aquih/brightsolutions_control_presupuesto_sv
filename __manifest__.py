@@ -1,6 +1,6 @@
 {
     'name': 'brightsolutions_control_presupuesto',
-    'version': '1.0.5',
+    'version': '1.0.6',
     'description': 'brightsolutions_control_presupuesto',
     'summary': 'Control del presupuesto para ordenes de compra',
     'license': 'LGPL-3',
